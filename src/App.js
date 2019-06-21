@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from './List'
 import './App.css';
+import Messages from './Messages';
 
 class App extends Component {
   static defaultProps = {
@@ -25,6 +26,8 @@ class App extends Component {
               cards={list.cardIds.map(id => store.allCards[id])}
             />
           ))}
+          <Messages name="Messages" unread={0}/>
+          <Messages name="notifications" unread={10}/>
         </div>
       </main>
     );
