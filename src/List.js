@@ -15,6 +15,7 @@ class ListClass extends React.Component {
 							key={card.id}
 							title={card.title}
 							content={card.content}
+							onDeleteItem={this.props.onDeleteItem}
 						/>
 					)}
 					<button

@@ -5,7 +5,8 @@ class CardClass extends React.Component {
 	render() {
   	return (
 			<div className='Card'>
-				<button 
+				<button
+				onClick= {this.props.onDeleteItem}
 				type='button'
 				>
 					delete

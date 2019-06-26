@@ -5,12 +5,14 @@ import Messages from './Messages';
 
 class App extends Component {
   static defaultProps = {
-    store: {
+    state: {
       lists: [],
       allCards: {},
     }
   };
-
+  handleDeleteItem() {
+    console.log('handle delete item called');
+  }
   render() {
     const { store } = this.props
     return (
@@ -24,10 +26,9 @@ class App extends Component {
               key={list.id}
               header={list.header}
               cards={list.cardIds.map(id => store.allCards[id])}
+              onDeleteItem={this.handleDeleteItem}
             />
           ))}
-          <Messages name="Messages" unread={0}/>
-          <Messages name="notifications" unread={10}/>
         </div>
       </main>
     );
