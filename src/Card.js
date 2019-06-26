@@ -6,13 +6,13 @@ class CardClass extends React.Component {
   	return (
 			<div className='Card'>
 				<button
-				onClick= {this.props.onDeleteItem}
+				onClick= {() => this.props.onDeleteItem(this.props.id)}
 				type='button'
 				>
 					delete
 				</button>
-				<h3>{this.props.title}</h3>
-				<p>{this.props.content}</p>
+				<h3>{this.props.title}</h3> 
+				<p>{this.props.content}</p> 
 			</div>
   	)
 	}
